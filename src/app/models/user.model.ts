@@ -5,7 +5,7 @@ export class User {
   created_at!: string;
   location!: string;
   bio!: string;
-  public_repos!: number;
+  public_repos!: any;
   public_gists!: number;
   followers!: number;
   html_url!: string;
