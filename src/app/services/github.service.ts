@@ -7,7 +7,7 @@ import { User } from '../models/user.model';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class GithubService {
   constructor(private http: HttpClient) { }
 
   getUser(name: string): Observable<User> {
