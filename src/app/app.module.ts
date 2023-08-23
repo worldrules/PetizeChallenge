@@ -9,6 +9,7 @@ import { GithubService } from './services/github.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
+import { PerfilStarsComponent } from './components/perfil-stars/perfil-stars.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     ProfileComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    PerfilStarsComponent
   ],
   imports: [
     BrowserModule,

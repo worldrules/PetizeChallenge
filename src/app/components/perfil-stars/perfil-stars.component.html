@@ -1,7 +1,7 @@
 <div class="github-card user-card">
   <div class="header"></div>
-  <a [routerLink]="'/perfil-stars'">
-    <img [src]="user.avatar_url+'&s=80'" [alt]="user.name" class="avatar">
+  <a href="{{user.html_url}}" target="_blank" class="avatar">
+    <img [src]="user.avatar_url+'&s=80'" [alt]="user.name">
   </a>
   <div class="content">
     <h1>{{user.name}}</h1>
