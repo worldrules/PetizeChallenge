@@ -1,6 +1,7 @@
-<div class="container">
-  <div class="jumbotron">
-    <input [formControl]="findControl" type="text" class="form-control mr-sm-2" placeholder="Github username">
+<div class="container mt-caminho/para/o/logo-do-github.png5">
+  <img src="../../../assets/gitlogo.png" alt="GitHub Logo" class="github-logo">
+  <div class="jumbotron mt-2">
+    <input [formControl]="findControl" type="text" class="form-control mr-sm-2 mt-2" placeholder="Github username">
   </div>
   <app-profile *ngIf="user" [user]="user"></app-profile>
   <app-not-found *ngIf="error"></app-not-found>
