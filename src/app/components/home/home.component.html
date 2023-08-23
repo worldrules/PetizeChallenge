@@ -2,6 +2,6 @@
   <div class="jumbotron">
     <input [formControl]="findControl" type="text" class="form-control mr-sm-2" placeholder="Github username">
   </div>
-  <app-profile></app-profile>
-  <app-not-found></app-not-found>
+  <app-profile *ngIf="user" [user]="user"></app-profile>
+  <app-not-found *ngIf="error"></app-not-found>
 </div>

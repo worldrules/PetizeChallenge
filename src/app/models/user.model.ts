@@ -1,4 +1,5 @@
 export class User {
+  name!: string;
   login!: string;
   avatar_url!: string;
   created_at!: string;
@@ -6,4 +7,6 @@ export class User {
   bio!: string;
   public_repos!: number;
   public_gists!: number;
+  followers!: number;
+  html_url!: string;
 }
