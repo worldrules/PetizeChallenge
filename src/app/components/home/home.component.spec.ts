@@ -8,6 +8,7 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home.component';
+import { ProfileComponent } from '../profile/profile.component';
 import { GithubService } from '../../services/github.service';
 import { User } from '../../models/user.model';
 
@@ -19,7 +20,7 @@ describe('HomeComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [HomeComponent, NotFoundComponent],
-      imports: [ReactiveFormsModule, HttpClientTestingModule, HttpClientModule, RouterModule],
+      imports: [ReactiveFormsModule, HttpClientTestingModule, HttpClientModule, RouterModule, ProfileComponent],
       providers: [GithubService,]
     }).compileComponents();
   });

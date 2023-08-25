@@ -19,13 +19,13 @@ interface Repository {
 export class PerfilStarsComponent {
   constructor(private http: HttpClient, private router: Router) { }
   @Input()
-  user: User | undefined;
+  user: User | null;
   sortedRepos: any[];
   searchQuery: string = '';
   repositories: Repository[] = [];
 
   searchRepositories() {
-    if (this.user && this.searchQuery.trim() !== '') { // Check if user is defined
+    if (this.user && this.searchQuery.trim() !== '') {
       const apiUrl = `https://api.github.com/users/${this.user.login}/repos`;
 
       this.http.get<Repository[]>(apiUrl)

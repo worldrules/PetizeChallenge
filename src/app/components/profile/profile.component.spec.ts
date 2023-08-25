@@ -8,7 +8,7 @@ describe('ProfileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule], // Import RouterTestingModule
+      imports: [RouterTestingModule],
       declarations: [ProfileComponent]
     }).compileComponents();
   });
