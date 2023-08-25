@@ -8,6 +8,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Pré-requisitos
 Antes de começar, você precisará ter o seguinte instalado:
 
+## Observação
+Clicar no avatar do perfil pesquisado para ir para pagina de repositórios.
+
+
+
 [Node.js](https://nodejs.org/) - Certifique-se de que o Node.js esteja instalado. Versão Utilizada (v18.16.0)
 
 ## Development server
