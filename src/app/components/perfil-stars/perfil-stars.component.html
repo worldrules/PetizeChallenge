@@ -1,8 +1,11 @@
 <div class="center-container">
+  <img src="../../../assets/gitlogo.png" alt="GitHub Logo" class="github-logo">
   <h2>Buscar Repositórios no GitHub</h2>
-  <input class="input-text" type="text" [(ngModel)]="searchQuery" placeholder="Nome de usuário do GitHub">
-  <button class="button" (click)="searchRepositories()">Buscar</button>
-  <button class="button" (click)="goBack()">Voltar</button>
+  <input class="input-text" type="text" [(ngModel)]="searchQuery" placeholder="Nome de usuário Github">
+  <div class="button-container">
+    <button class="button" (click)="searchRepositories()">Buscar</button>
+    <button class="button" (click)="goBack()">Voltar</button>
+  </div>
   <div *ngIf="repositories.length > 0">
     <h3>Repositórios encontrados:</h3>
     <ul>

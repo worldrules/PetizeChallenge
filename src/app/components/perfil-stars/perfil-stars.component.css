@@ -20,6 +20,11 @@
 .button:hover {
   background-color: #0056b3;
 }
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Espaçamento entre o input e os botões */
+}
 
 .input-text {
   padding: 8px 12px;
