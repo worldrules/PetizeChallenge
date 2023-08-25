@@ -1,7 +1,7 @@
-import { GithubService } from './../../services/github.service';
 import { Component, Input, OnInit } from '@angular/core'
 import { User } from 'src/app/models/user.model';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 interface Repository {
   name: string;
@@ -17,7 +17,7 @@ interface Repository {
   styleUrls: ['./perfil-stars.component.css']
 })
 export class PerfilStarsComponent {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
   @Input()
   user: User;
   sortedRepos: any[];
@@ -33,6 +33,10 @@ export class PerfilStarsComponent {
           this.repositories = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
         });
     }
+  }
+
+  goBack() {
+    this.router.navigate(['/']);
   }
 
 }

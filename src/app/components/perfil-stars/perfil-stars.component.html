@@ -1,16 +1,16 @@
-<div>
+<div class="center-container">
   <h2>Buscar Repositórios no GitHub</h2>
-  <input type="text" [(ngModel)]="searchQuery" placeholder="Nome de usuário do GitHub">
-  <button (click)="searchRepositories()">Buscar</button>
-</div>
-
-<div *ngIf="repositories.length > 0">
-  <h3>Repositórios encontrados:</h3>
-  <ul>
-    <li *ngFor="let repo of repositories">
-      <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
-      <p>{{ repo.description }}</p>
-      <p>Estrelas: {{ repo.stargazers_count }}</p>
-    </li>
-  </ul>
+  <input class="input-text" type="text" [(ngModel)]="searchQuery" placeholder="Nome de usuário do GitHub">
+  <button class="button" (click)="searchRepositories()">Buscar</button>
+  <button class="button" (click)="goBack()">Voltar</button>
+  <div *ngIf="repositories.length > 0">
+    <h3>Repositórios encontrados:</h3>
+    <ul>
+      <li *ngFor="let repo of repositories">
+        <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
+        <p>{{ repo.description }}</p>
+        <p>Estrelas: {{ repo.stargazers_count }}</p>
+      </li>
+    </ul>
+  </div>
 </div>
