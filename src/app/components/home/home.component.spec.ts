@@ -3,6 +3,8 @@ import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { of, throwError } from 'rxjs';
 import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from '../not-found/not-found.component';
+
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home.component';
@@ -16,7 +18,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HomeComponent],
+      declarations: [HomeComponent, NotFoundComponent],
       imports: [ReactiveFormsModule, HttpClientTestingModule, HttpClientModule, RouterModule],
       providers: [GithubService,]
     }).compileComponents();

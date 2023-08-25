@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(private githubService: GithubService) { }
   findControl = new FormControl();
   error: boolean = false;
-  user: any;
+  user: User | undefined;
 
   ngOnInit() {
     this.findControl.valueChanges
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
         switchMap(value =>
           this.githubService.getUser(value).pipe(
             catchError(err => {
-              this.user = null;
+              this.user = undefined;
               this.error = true;
               return EMPTY;
             })))
